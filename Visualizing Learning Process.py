@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
-from time import sleep
 
 #Sig moid function
 def sigmoid(z):
@@ -43,7 +42,6 @@ sess.run(tf.global_variables_initializer())
 ans = sess.run(sig, feed_dict = {x : val})
 
 #Training loop
-sleep(2)
 for i in range(400):
     ans, loss_value, _ = sess.run([sig, loss, opt], feed_dict = {x : val})
     fig.clear()
